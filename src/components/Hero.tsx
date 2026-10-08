@@ -27,10 +27,10 @@ export default function Hero() {
         
         <div className="flex-1 flex justify-center">
   <img
-    src="/banner-stack.png"
-    alt="Dev Stack illustration"
-    className="w-80 h-80 md:w-[28rem] md:h-[28rem] object-contain"
-  />
+  src={`${import.meta.env.BASE_URL}banner-stack.png`}
+  alt="Dev Stack illustration"
+  className="w-80 h-80 md:w-[28rem] md:h-[28rem] object-contain"
+/>
 </div>
       </div>
     </section>

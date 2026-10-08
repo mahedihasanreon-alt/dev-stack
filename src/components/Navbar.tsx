@@ -4,21 +4,20 @@ import { FiMenu, FiX } from "react-icons/fi";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const links = ["Home", "Technologies", "Projects", "About", "Contact"];
+  const base = import.meta.env.BASE_URL;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-       
+        
         <div className="hidden md:flex items-center gap-2">
-        <img
-  src="/logo-text.png"
-  
-  className="h-7"
-/>
-         
+          <img
+            src={`${base}logo-text.png`}
+            alt="Dev Stack"
+            className="h-8"
+          />
         </div>
 
-        
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl text-gray-700"
@@ -30,11 +29,10 @@ export default function Navbar() {
         
         <div className="md:hidden flex items-center gap-1.5">
           <img
-            src="https://icon.icepanel.io/Technology/svg/React.svg"
-            alt="logo"
-            className="w-6 h-6"
+            src={`${base}logo-text.png`}
+            alt="Dev Stack"
+            className="h-6"
           />
-          <span className="font-bold text-brand-gradient">Dev Stack</span>
         </div>
 
        
@@ -46,7 +44,7 @@ export default function Navbar() {
           ))}
         </div>
 
-       
+        
         <div className="flex items-center gap-2">
           <button className="text-sm text-gray-700 hover:text-orange-500 transition">
             Sign In

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --brand-gradient: linear-gradient(to right, #f97316, #ec4899, #8b5cf6);
+}
+
+.brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+.text-brand-gradient {
+  background-image: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tech-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.2);
+}

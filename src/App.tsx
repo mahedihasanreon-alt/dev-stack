@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("/data.json");
+        const res = await fetch(import.meta.env.BASE_URL + "data.json");
         if (!res.ok) throw new Error("Failed to load");
         const data: Technology[] = await res.json();
         setTechnologies(data);
